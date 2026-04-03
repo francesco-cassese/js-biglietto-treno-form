@@ -22,36 +22,72 @@
 
         <!-- FORM -->
         <form id="ticket-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
 
-            <!-- NOME -->
-            <label>
-                <span class="fw-bold">Nome:</span>
-                <input class="form-control input-name" required type="text" placeholder="Es. Mario Rossi"
-                    aria-label="Inserisci qui il tuo nome ">
-            </label>
+                        <!-- NOME -->
+                        <label>
+                            <span class="fw-bold">Nome:</span>
+                            <input class="form-control input-name" required type="text" placeholder="Es. Mario Rossi"
+                                aria-label="Inserisci qui il tuo nome ">
+                        </label>
 
-            <!-- CHILOMETRI -->
-            <label>
-                <span class="fw-bold">Chilometri da percorrere:</span>
-                <input class="form-control input-km" required type="number" placeholder="Inserisci i km"
-                    aria-label="Inserisci qui i chilometri da percorrere">
-            </label>
+                        <!-- CHILOMETRI -->
+                        <label>
+                            <span class="fw-bold">Chilometri da percorrere:</span>
+                            <input class="form-control input-km" required type="number" placeholder="Inserisci i km"
+                                aria-label="Inserisci qui i chilometri da percorrere">
+                        </label>
 
-            <!-- FASCIA D'ETà-->
-            <label>
-                <span class="fw-bold">Fascia d'età</span>
-                <select class="form-select select-age" required id="age-selector"
-                    aria-label="Seleziona la tua fascia d'età">
-                    <option selected disabled hidden value="">Seleziona fascia d'età</option>
-                    <option value="18">Ho meno di 17 anni</option>
-                    <option value="30">Età compresa tra 18 e 64</option>
-                    <option value="65">Ho più di 65 anni</option>
-                </select>
-            </label>
+                        <!-- FASCIA D'ETà-->
+                        <label>
+                            <span class="fw-bold">Fascia d'età</span>
+                            <select class="form-select select-age" required id="age-selector"
+                                aria-label="Seleziona la tua fascia d'età">
+                                <option selected disabled hidden value="">Seleziona fascia d'età</option>
+                                <option value="18">Ho meno di 17 anni</option>
+                                <option value="30">Età compresa tra 18 e 64</option>
+                                <option value="65">Ho più di 65 anni</option>
+                            </select>
+                        </label>
 
-            <!-- BOTTONE -->
-            <button type="submit" id="btn-ticket">Paga e piangi</button>
+                        <!-- BOTTONE -->
+                        <button type="submit" id="btn-ticket">Paga e piangi</button>
+                    </div>
+                </div>
+            </div>
         </form>
+
+        <!-- CARD -->
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="card">
+                        <div class="container-img"></div>
+                        <h3 class="passenger-name">Francesco</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Offerta</th>
+                                    <th scope="col">Carrozza</th>
+                                    <th scope="col">CodiceCP</th>
+                                    <th scope="col">Costo Biglietto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Biglietto Standard</td>
+                                    <td>5</td>
+                                    <td>92911</td>
+                                    <td>&euro;2.10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 

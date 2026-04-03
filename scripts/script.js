@@ -50,6 +50,10 @@ const rimuoviRefresh = event => {
         const prezzoTotaleBiglietto = calcoloBiglietto(etaSelezionata, numeroValidato);
 
         console.log(`il passeggero ${nomeValidato} di età ${etaSelezionata} percorrerà ${numeroValidato}km quindi pagherà: ${prezzoTotaleBiglietto}`);
+
+        inputNome.value = '';
+        inputKm.value = '';
+        selectEta.value = '';
     }
 }
 
