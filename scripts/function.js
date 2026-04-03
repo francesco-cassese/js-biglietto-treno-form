@@ -55,7 +55,9 @@ const controllaNumero = input => {
 //CALCOLO
 //======================================================
 
-const calcoloBiglietto = (eta, km) => {
+const calcoloBiglietto = (eta, km, event) => {
+
+    event.preventDefault();
 
     //Variabile costo base biglietto
     const prezzoBase = (km * 0.21);
