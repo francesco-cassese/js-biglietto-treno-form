@@ -35,6 +35,10 @@ const controllaNumero = input => {
     // Conversione da stringe in numero
     const numeroValidato = parseFloat(numStringaValidato);
 
+    if (numeroValidato === "") {
+        return -1;
+    }
+
     //Controllo che sia un numero
     if (isNaN(numeroValidato)) {
         return 0;
