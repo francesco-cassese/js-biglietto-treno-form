@@ -1,5 +1,9 @@
 'use strict';
 
+//======================================================
+// CONTROLLI
+//======================================================
+
 // --- Pulizia Testo ---
 
 const pulisciTesto = testo => {
@@ -38,4 +42,26 @@ const controllaNumero = input => {
         return 1;
     }
     return numeroValidato;
+}
+
+//======================================================
+//CALCOLO
+//======================================================
+
+const calcoloBiglietto = (eta, km, prezzoAlKm, sogliaMinore, sogliaSenior, scontoMinore, scontoSenior) => {
+
+    //Variabile costo base biglietto
+    const prezzoBase = (km * prezzoAlKm);
+    let prezzoFinale = prezzoBase;
+
+    if (eta < sogliaMinore) {
+        prezzoFinale -= (prezzoBase * scontoMinore / 100);
+        return prezzoFinale.toFixed(2);
+
+    } else if (eta >= sogliaSenior) {
+        prezzoFinale -= (prezzoBase * scontoSenior / 100);
+        return prezzoFinale.toFixed(2);
+    } else {
+        return prezzoBase.toFixed(2);
+    }
 }
