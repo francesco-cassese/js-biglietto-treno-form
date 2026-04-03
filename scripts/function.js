@@ -9,7 +9,7 @@
 const pulisciTesto = testo => {
 
     // Trasforma in maiuscolo, toglie spazi ai lati e spazi interni
-    return testo..toString().trim().split(" ").join("");
+    return testo.toString().trim().split(" ").join("");
 };
 
 // --- Controllo la presenza del testo ---
