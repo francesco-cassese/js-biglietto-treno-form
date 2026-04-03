@@ -60,3 +60,12 @@
     flex-direction: column;
     flex: 1;
 }
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-main-card {
+    flex-grow: 2;
+}
