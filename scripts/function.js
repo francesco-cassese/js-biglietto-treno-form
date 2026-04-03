@@ -54,7 +54,7 @@ const calcoloBiglietto = (eta, km) => {
     const prezzoBase = (km * 0.21);
     let prezzoFinale = prezzoBase;
 
-    if (eta < 17) {
+    if (eta < 18) {
         prezzoFinale -= (prezzoBase * 20 / 100);
         return prezzoFinale.toFixed(2);
 
