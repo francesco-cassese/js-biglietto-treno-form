@@ -9,7 +9,7 @@
 const pulisciTesto = testo => {
 
     // Trasforma in maiuscolo, toglie spazi ai lati e spazi interni
-    return testo.toUpperCase().trim().split(" ").join("");
+    return testo..toString().trim().split(" ").join("");
 };
 
 // --- Controllo la presenza del testo ---
@@ -29,8 +29,11 @@ const controllaStringa = (input, pulizia) => {
 // --- Controllo validità numero ---
 const controllaNumero = input => {
 
+    //Controllo prima la stringa
+    const numStringaValidato = input.trim().replace(',', '.');
+
     // Conversione da stringe in numero
-    const numeroValidato = parseInt(input);
+    const numeroValidato = parseFloat(numStringaValidato);
 
     //Controllo che sia un numero
     if (isNaN(numeroValidato)) {
