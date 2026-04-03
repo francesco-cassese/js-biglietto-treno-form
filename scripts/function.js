@@ -22,7 +22,8 @@ const controllaStringa = (input, pulizia) => {
     return inputPulito;
 }
 
-const controllaNumero = (input) => {
+// --- Controllo validità numero ---
+const controllaNumero = input => {
 
     // Conversione da stringe in numero
     const numeroValidato = parseInt(input);
