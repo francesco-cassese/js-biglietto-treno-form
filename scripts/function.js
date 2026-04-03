@@ -48,18 +48,18 @@ const controllaNumero = input => {
 //CALCOLO
 //======================================================
 
-const calcoloBiglietto = (eta, km, prezzoAlKm, sogliaMinore, sogliaSenior, scontoMinore, scontoSenior) => {
+const calcoloBiglietto = (eta, km) => {
 
     //Variabile costo base biglietto
-    const prezzoBase = (km * prezzoAlKm);
+    const prezzoBase = (km * 0.21);
     let prezzoFinale = prezzoBase;
 
-    if (eta < sogliaMinore) {
-        prezzoFinale -= (prezzoBase * scontoMinore / 100);
+    if (eta < 17) {
+        prezzoFinale -= (prezzoBase * 20 / 100);
         return prezzoFinale.toFixed(2);
 
-    } else if (eta >= sogliaSenior) {
-        prezzoFinale -= (prezzoBase * scontoSenior / 100);
+    } else if (eta >= 65) {
+        prezzoFinale -= (prezzoBase * 40 / 100);
         return prezzoFinale.toFixed(2);
     } else {
         return prezzoBase.toFixed(2);
