@@ -20,8 +20,11 @@
     --bg-wrapper-main: #F0F2F5;
     --bg-header: #FFF;
     --color-title-header: #CC0000;
+    --bg-btn: #CC0000;
     --color-btn-Hover: #A30000;
     --color-txt-label: #4b5563;
+    --color-border-btn: #CC0000;
+    --color-txt-btn: #FFF;
 }
 
 .txt-grey-label {
@@ -68,4 +71,19 @@
 
 .container-main-card {
     flex-grow: 2;
+}
+
+.btn-ticket {
+    padding: 5px 10px;
+    border: 1px solid var(--color-border-btn);
+    border-radius: 20px;
+    color: var(--color-txt-btn);
+    background-color: var(--bg-btn);
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+.btn-ticket:hover {
+    transform: scale(1.1);
+    background-color: var(--color-btn-Hover);
 }
