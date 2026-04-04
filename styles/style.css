@@ -24,6 +24,7 @@
     --color-btn-Hover: #A30000;
     --color-txt-label: #4b5563;
     --color-border-btn: #CC0000;
+    --color-border-table: #4b5563;
     --color-txt-btn: #FFF;
 }
 
@@ -38,6 +39,7 @@
 */
 
 .header-container {
+    min-height: 125px;
     background-color: var(--bg-header);
     align-items: center;
     font-family: 'Montserrat', sans-serif;
@@ -55,7 +57,7 @@
 */
 
 .wrapper {
-    min-height: 100vh;
+    min-height: calc(100vh - 125px);
     background-color: var(--bg-wrapper-main);
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -64,14 +66,50 @@
     flex: 1;
 }
 
+/* --- Form --- */
+
+.form-select {
+    width: 88%;
+}
+
+/* --- Card --- */
+
 .card {
     display: flex;
     flex-direction: row;
+    min-height: 200px;
+    border-radius: 20px;
+}
+
+.container-name {
+    padding: 7px;
 }
 
 .container-main-card {
     flex-grow: 2;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--color-border-table);
+    border-bottom: 2px solid var(--color-border-table);
+    margin: 30px 10px 30px 0;
 }
+
+.table-ticket {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.passenger-name {
+    font-size: 19px;
+    padding: 10px 0 0 30px;
+}
+
+.card-head {
+    font-size: 20px;
+}
+
+
+/* --- Bottone input --- */
 
 .btn-ticket {
     padding: 5px 10px;
