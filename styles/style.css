@@ -26,6 +26,7 @@
     --color-border-btn: #CC0000;
     --color-border-table: #4b5563;
     --color-txt-btn: #FFF;
+    --bg-card: #FFF;
 }
 
 .txt-grey-label {
@@ -75,39 +76,9 @@
 /* --- Card --- */
 
 .card {
-    display: flex;
-    flex-direction: row;
-    min-height: 200px;
     border-radius: 20px;
+    background-color: var(--bg-card);
 }
-
-.container-name {
-    padding: 7px;
-}
-
-.container-main-card {
-    flex-grow: 2;
-    display: flex;
-    align-items: center;
-    border-top: 2px solid var(--color-border-table);
-    border-bottom: 2px solid var(--color-border-table);
-    margin: 30px 10px 30px 0;
-}
-
-.table-ticket {
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-.passenger-name {
-    font-size: 19px;
-    padding: 10px 0 0 30px;
-}
-
-.card-head {
-    font-size: 20px;
-}
-
 
 /* --- Bottone input --- */
 
