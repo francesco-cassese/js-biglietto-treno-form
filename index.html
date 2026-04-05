@@ -65,9 +65,9 @@
                             <select class="form-select select-age mb-3" required id="age-selector"
                                 aria-label="Seleziona la tua fascia d'età">
                                 <option selected disabled hidden value="">Seleziona età</option>
-                                <option value="minorenne">Meno di 17</option>
-                                <option value="maggiorenne">Maggiorenne</option>
-                                <option value="senior">Senior (più di 65 anni)</option>
+                                <option value="17">Meno di 17</option>
+                                <option value="30">Maggiorenne</option>
+                                <option value="65">Senior (più di 65 anni)</option>
                             </select>
                         </label>
 
@@ -80,40 +80,7 @@
 
         <!-- CARD -->
         <div class="container">
-            <div class="row">
-                <div class="col-12 mx-auto">
-                    <section class="ticket">
-                        <div class="ticket-header">
-                            <h3>Dettagli Passeggero</h3>
-                        </div>
-                        <div class="ticket-body">
-                            <div class="details d-flex justify-content-around">
-                                <div class="detail-item d-flex flex-column">
-                                    <span class="label">PASSEGGERO</span>
-                                    <span class="value">Francesco</span>
-                                </div>
-                                <div class="detail-item d-flex flex-column">
-                                    <span class="label">CARROZZA</span>
-                                    <span class="value">05</span>
-                                </div>
-                                <div class="detail-item d-flex flex-column">
-                                    <span class="label">POSTO</span>
-                                    <span class="value">12A</span>
-                                </div>
-                                <div class="detail-item d-flex flex-column">
-                                    <span class="label">OFFERTA</span>
-                                    <span class="value">Standard</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ticket-footer">
-                            <div class="barcode">
-                                <div class="barcode-mock">*AZ829K*</div>
-                                <span class="pnr">PNR: AZ829K</span>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+            <div id="container-ticket" class="row d-none">
             </div>
         </div>
     </main>

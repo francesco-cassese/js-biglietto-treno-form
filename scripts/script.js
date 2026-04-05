@@ -7,6 +7,7 @@ const inputKm = document.querySelector('.input-km');
 const selectEta = document.querySelector('.select-age');
 const btnTicket = document.querySelector('#btn-ticket');
 const formTicket = document.querySelector('#ticket-form');
+const containerTicket = document.querySelector('#container-ticket');
 
 
 const rimuoviRefresh = event => {
@@ -42,15 +43,69 @@ const rimuoviRefresh = event => {
         }
     }
 
-
+    //Se i dati sono validati
     if (datiValidati) {
 
-        const etaSelezionata = parseInt(selectEta.value);
+        const etaSelezionata = parseInt(selectEta.value);             //Converto i numeri in interi 
 
-        const prezzoTotaleBiglietto = calcoloBiglietto(etaSelezionata, numeroValidato);
+        let nomeOfferta = "Biglietto Standard";                       //Definisco i nomi dell'offerta
+        if (etaSelezionata < 18) nomeOfferta = "Sconto Under 18";
+        if (etaSelezionata >= 65) nomeOfferta = "Sconto Senior";
 
+        const prezzoTotaleBiglietto = calcoloBiglietto(etaSelezionata, numeroValidato);    //Calcolo il prezzo del biglietto
+
+        //Genero i dati causali
+        const carrozza = Math.floor(Math.random() * 12) + 1;  //DA 1 a 12
+        const posto = Math.floor(Math.random() * 80) + 1 + "A";  //Da 1 a 80  
+        const pnr = Math.random().toString(36).substring(2, 8).toUpperCase();
+
+        //Ignetto tutto nell'html
+        containerTicket.innerHTML = `
+         <div class="col-12 mx-auto">
+                    <section class="ticket">
+                        <div class="ticket-header">
+                            <h3>Dettagli Passeggero</h3>
+                        </div>
+                        <div class="ticket-body">
+                            <div class="details d-flex justify-content-around">
+                                <div class="detail-item d-flex flex-column">
+                                    <span class="label">PASSEGGERO</span>
+                                    <span class="value">${inputNome.value}</span>
+                                </div>
+                                <div class="detail-item d-flex flex-column">
+                                    <span class="label">CARROZZA</span>
+                                    <span class="value">${carrozza}</span>
+                                </div>
+                                <div class="detail-item d-flex flex-column">
+                                    <span class="label">POSTO</span>
+                                    <span class="value">${posto}</span>
+                                </div>
+                                <div class="detail-item d-flex flex-column">
+                                    <span class="label">OFFERTA</span>
+                                    <span class="value">${nomeOfferta}</span>
+                                </div>
+                                <div class="detail-item d-flex flex-column">
+                                    <span class="label">PREZZO</span>
+                                    <span class="value">&euro;${prezzoTotaleBiglietto}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket-footer">
+                            <div class="barcode">
+                                <div class="barcode-mock">*${pnr}*</div>
+                                <span class="pnr">PNR: ${pnr}</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>`;
+
+        //Rimuovo la classe d-none
+        containerTicket.classList.remove('d-none');
+
+        //Stampo in console
         console.log(`il passeggero ${nomeValidato} di età ${etaSelezionata} percorrerà ${numeroValidato}km quindi pagherà: ${prezzoTotaleBiglietto}`);
 
+        //Resetto tutto
         inputNome.value = '';
         inputKm.value = '';
         selectEta.value = '';
