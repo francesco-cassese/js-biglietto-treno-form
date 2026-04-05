@@ -105,6 +105,10 @@
     color: #999;
 }
 
+.detail-item {
+    margin-bottom: 15px;
+}
+
 .label {
     font-size: 11px;
     text-transform: uppercase;
@@ -167,4 +171,10 @@
 .btn-ticket:hover {
     transform: scale(1.1);
     background-color: var(--color-btn-Hover);
+}
+
+@media screen and (min-width: 425px) {
+    .details {
+        disp
+    }
 }
