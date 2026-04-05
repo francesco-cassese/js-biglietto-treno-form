@@ -5,9 +5,10 @@
 const inputNome = document.querySelector('.input-name');
 const inputKm = document.querySelector('.input-km');
 const selectEta = document.querySelector('.select-age');
-const btnTicket = document.querySelector('#btn-ticket');
 const formTicket = document.querySelector('#ticket-form');
 const containerTicket = document.querySelector('#container-ticket');
+const btnRestart = document.getElementById('btn-restart');
+const btnEnd = document.getElementById('btn-end');
 
 
 const rimuoviRefresh = event => {
@@ -97,10 +98,28 @@ const rimuoviRefresh = event => {
                             </div>
                         </div>
                     </section>
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <button id="btn-restart" class="btn btn-outline-danger">Continua gli acquisti</button>
+                        <button id="btn-end" class="btn btn-danger">Fine / Stampa</button>
+                    </div>
                 </div>`;
 
         //Rimuovo la classe d-none
         containerTicket.classList.remove('d-none');
+
+        //Collego i bottoni sotto la card
+        const btnRestart = document.getElementById('btn-restart');
+        const btnEnd = document.getElementById('btn-end');
+
+        //Se l'utente preme il bottone restart aggiungi la classe d-none
+        btnRestart.addEventListener('click', () => {
+            containerTicket.classList.add('d-none');
+        });
+
+        //Se l'utente preme il bottone fine gli mando l'allert
+        btnEnd.addEventListener('click', () => {
+            alert("Grazie per aver viaggiato con Sfreccia Rossa Ma Non Troppo!");
+        });
 
         //Stampo in console
         console.log(`il passeggero ${nomeValidato} di età ${etaSelezionata} percorrerà ${numeroValidato}km quindi pagherà: ${prezzoTotaleBiglietto}`);
