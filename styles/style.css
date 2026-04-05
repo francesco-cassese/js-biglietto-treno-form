@@ -24,9 +24,13 @@
     --color-btn-Hover: #A30000;
     --color-txt-label: #4b5563;
     --color-border-btn: #CC0000;
-    --color-border-table: #4b5563;
     --color-txt-btn: #FFF;
-    --bg-card: #FFF;
+    --bg-ticket: #FFF;
+    --bg-header-ticket: linear-gradient(to right, #b30000, #e30613);
+    --border-ticket: #eee;
+    --color-title-header-title: #FFF;
+    --border-details: #ddd;
+    --color-txt-label-ticket: #000;
 }
 
 .txt-grey-label {
@@ -75,9 +79,77 @@
 
 /* --- Card --- */
 
-.card {
-    border-radius: 20px;
+.ticket {
     background-color: var(--bg-card);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-ticket);
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+.ticket-header {
+    background: var(--bg-header-ticket);
+    color: var(--color-title-header-title);
+    padding: 15px;
+    font-weight: bold;
+}
+
+.ticket-body {
+    padding: 30px;
+}
+
+.details {
+    border: 1px dashed #ddd;
+    padding-top: 5px;
+    color: #999;
+}
+
+.label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.value {
+    font-size: 18px;
+    color: #333;
+    font-weight: 700;
+}
+
+.ticket-footer {
+    background: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px dashed #ddd;
+    position: relative;
+}
+
+.libre-barcode-39-regular {
+    font-family: "Libre Barcode 39", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.barcode-mock {
+    font-family: 'Libre Barcode 39', cursive;
+    font-size: 80px;
+    line-height: 0.8;
+    margin: 10px 0;
+    color: #000;
+    user-select: none;
+}
+
+.pnr {
+    font-family: 'Courier New', Courier, monospace;
+    color: #666;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* --- Bottone input --- */

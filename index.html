@@ -25,8 +25,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <!-- COLLEGAMENTO GOOGLE FONTS "Libre Bar Code 39"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
+
     <!-- COLLEGAMENTI CSS -->
-    <link rel="stylesheet" href="./styles/mediaquery.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
@@ -60,7 +64,7 @@
                             <span class="fw-bold txt-grey-label">Fascia d'età</span>
                             <select class="form-select select-age mb-3" required id="age-selector"
                                 aria-label="Seleziona la tua fascia d'età">
-                                <option selected disabled hidden value="">Seleziona fascia d'età</option>
+                                <option selected disabled hidden value="">Seleziona età</option>
                                 <option value="18">Ho meno di 17 anni</option>
                                 <option value="30">Età compresa tra 18 e 64</option>
                                 <option value="65">Ho più di 65 anni</option>
@@ -75,45 +79,40 @@
         </form>
 
         <!-- CARD -->
-        <div class="card border-0 shadow-sm mt-5">
-            <div class="p-4">
-                <h5 class="fw-bold text-uppercase mb-3">
-                    Dettaglio passeggeri
-                </h5>
-
-                <div class="row g-0 border-top border-bottom">
-
-                    <div class="col-md-3 p-3">
-                        <small class="d-block text-uppercase fw-bold mb-1"">
-                            Nome Passeggero
-                        </small>
-                        <span class=" fw-bold">Jon Snow</span>
-                    </div>
-
-                    <div class="col-md-9 p-3 bg-white">
-                        <div class="row text-start text-md-center h-100 align-items-center">
-
-                            <div class="col-6 col-md-3">
-                                <small class="d-block fw-bold text-muted mb-1">Offerta</small>
-                                <span>Biglietto Standard</span>
-                            </div>
-
-                            <div class="col-6 col-md-3">
-                                <small class="d-block fw-bold text-muted mb-1">Carrozza</small>
-                                <span>5</span>
-                            </div>
-
-                            <div class="col-6 col-md-3">
-                                <small class="d-block fw-bold text-muted mb-1">Codice CP</small>
-                                <span>92911</span>
-                            </div>
-
-                            <div class="col-6 col-md-3">
-                                <small class="d-block fw-bold text-muted mb-1">Costo biglietto</small>
-                                <span class="fw-bold">2.10&euro;</span>
+        <div class="container">
+            <div class="row">
+                <div class="col-9 mx-auto">
+                    <section class="ticket">
+                        <div class="ticket-header">
+                            <h3>Dettagli Passeggero</h3>
+                        </div>
+                        <div class="ticket-body">
+                            <div class="details d-flex justify-content-around">
+                                <div class="detail-item d-flex flex-column">
+                                    <span class="label">PASSEGGERO</span>
+                                    <span class="value">Francesco</span>
+                                </div>
+                                <div class="detail-item d-flex flex-column">
+                                    <span class="label">CARROZZA</span>
+                                    <span class="value">05</span>
+                                </div>
+                                <div class="detail-item d-flex flex-column">
+                                    <span class="label">POSTO</span>
+                                    <span class="value">12A</span>
+                                </div>
+                                <div class="detail-item d-flex flex-column">
+                                    <span class="label">OFFERTA</span>
+                                    <span class="value">Standard</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="ticket-footer">
+                            <div class="barcode">
+                                <div class="barcode-mock">*AZ829K*</div>
+                                <span class="pnr">PNR: AZ829K</span>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
